@@ -11,3 +11,10 @@ Last Updated:
 14:10|NC - Creates a new scene
 14:10|NC - Adds Cinemachine to project
 14:34|NC - Creates a trello board for tasks
+14:49|NC - Creates temporary sprites for playerIdle and playerMove
+15:03|NC - Adds Player Input Actions
+15:03|NC - Adds Player sprites for testing
+15:04|NC - Creates temporary playerIdle and playerWalk
+15:57|NC - Player can now move. Animations Changes depending on move value
+15:59|NC - Videos recorded player moving.
+16:02|NC - Updates Dev Log

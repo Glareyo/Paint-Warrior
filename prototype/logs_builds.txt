@@ -5,3 +5,6 @@ Last Updated:
 12:27|NC - Creation of Paint-Warrior Unity Project
 14:10|NC - Creates a new scene
 14:10|NC - Adds Cinemachine to project
+15:03|NC - Adds Player Input Actions
+15:03|NC - Adds Player sprites for testing
+15:57|NC - Player can now move. Animations Changes depending on move value
