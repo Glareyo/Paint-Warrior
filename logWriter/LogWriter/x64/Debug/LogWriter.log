@@ -1,0 +1,23 @@
+﻿  Clock.cpp
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Clock.h(2,32): warning C4081: expected 'newline'; found '.'
+  (compiling source file 'Clock.cpp')
+  
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Clock.cpp(4,32): warning C4081: expected 'newline'; found '.'
+  Engine.cpp
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Clock.h(2,32): warning C4081: expected 'newline'; found '.'
+  (compiling source file 'Engine.cpp')
+  
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Engine.cpp(19,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Engine.cpp(85,31): warning C4101: 'e': unreferenced local variable
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Engine.cpp(95,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Engine.cpp(110,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Engine.cpp(153,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Log.cpp
+  LogWriter.cpp
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\Clock.h(2,32): warning C4081: expected 'newline'; found '.'
+  (compiling source file 'LogWriter.cpp')
+  
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\LogWriter.cpp(14,32): warning C4081: expected 'newline'; found '.'
+C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\LogWriter.cpp(22,8): warning C4101: 'index': unreferenced local variable
+  Generating Code...
+  LogWriter.vcxproj -> C:\Users\nemo1\OneDrive\Desktop\Game-Dev-Template-Repo\logWriter\x64\Debug\LogWriter.exe
