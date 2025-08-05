@@ -8,3 +8,6 @@ Last Updated:
 13:05|NC - Updates Dev Log
 14:09|NC - Created a base UML for a few classes
 14:09|NC - Updates Dev-log
+14:10|NC - Creates a new scene
+14:10|NC - Adds Cinemachine to project
+14:34|NC - Creates a trello board for tasks

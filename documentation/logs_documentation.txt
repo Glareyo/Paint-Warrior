@@ -7,3 +7,4 @@ Last Updated:
 13:05|NC - Updates Dev Log
 14:09|NC - Created a base UML for a few classes
 14:09|NC - Updates Dev-log
+14:34|NC - Creates a trello board for tasks

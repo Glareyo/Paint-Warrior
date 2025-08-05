@@ -3,3 +3,5 @@ Last Updated:
 
 20250805
 12:27|NC - Creation of Paint-Warrior Unity Project
+14:10|NC - Creates a new scene
+14:10|NC - Adds Cinemachine to project
