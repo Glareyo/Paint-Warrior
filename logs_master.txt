@@ -5,3 +5,6 @@ Last Updated:
 10:15|NC - Copy and Creation of Development Template
 10:16|NC - Creation of Dev Log
 12:27|NC - Creation of Paint-Warrior Unity Project
+13:05|NC - Updates Dev Log
+14:09|NC - Created a base UML for a few classes
+14:09|NC - Updates Dev-log

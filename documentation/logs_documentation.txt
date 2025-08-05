@@ -4,3 +4,6 @@ Last Updated:
 20250805
 10:15|NC - Copy and Creation of Development Template
 10:16|NC - Creation of Dev Log
+13:05|NC - Updates Dev Log
+14:09|NC - Created a base UML for a few classes
+14:09|NC - Updates Dev-log
