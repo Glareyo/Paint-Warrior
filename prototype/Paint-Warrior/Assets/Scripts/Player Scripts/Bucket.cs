@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class Bucket : MonoBehaviour
 {
     [Header("GameObjects")]
-    [SerializeField] GameObject paintGameObject;
+    [SerializeField] SpriteRenderer paintSprite;
     [Header("Stats")]
     [SerializeField] int BaseDamage; // Base damage  that bucket reverts to.
     [SerializeField] float BaseSpeed; // Base speed the bucket can use for certain actions (mix, use, etc...)
@@ -15,7 +16,8 @@ public class Bucket : MonoBehaviour
     int modifiedDamage; // BaseDamage + Modification Stats
     float modifiedSpeed; // BaseSpeed + Modification Stats
     int modifiedMaxQuantity; // BaseMaxQuantity + Modification Stats.
-    SpriteRenderer paintSpriteRenderer;
+
+    Color NO_PAINT = new Color(0, 0, 0, 0);
 
     // Implement Modification
 
@@ -23,7 +25,6 @@ public class Bucket : MonoBehaviour
 
     void Start()
     {
-        paintSpriteRenderer = paintGameObject.GetComponent<SpriteRenderer>();
         paintColor = startingPaintColor;
         ToggleOnPaintSprite();
     }
@@ -41,7 +42,7 @@ public class Bucket : MonoBehaviour
         {
             quantity = modifiedMaxQuantity;
         }
-        if (!paintGameObject.activeSelf)
+        if (paintSprite.color == NO_PAINT)
         {
             ToggleOnPaintSprite();
         }
@@ -73,14 +74,17 @@ public class Bucket : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Toggles off the alpha that handles the paint can.
+    /// </summary>
     void ToggleOffPaintSprite()
     {
-        paintGameObject.SetActive(false);
+        paintSprite.color = NO_PAINT;
     }
     void ToggleOnPaintSprite()
     {
-        paintGameObject.SetActive(true);
-        paintSpriteRenderer.color = new Color(paintColor.Color.r, paintColor.Color.g, paintColor.Color.b, 1);
+        paintSprite.color = new Color(paintColor.Color.r, paintColor.Color.g, paintColor.Color.b, 1);
     }
 
     /// <summary>

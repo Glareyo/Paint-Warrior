@@ -18,3 +18,5 @@ Last Updated:
 03:09|NC - Paint brush can now rotate, and the effect rotates with it.
 03:53|NC - Implements bucket.cs and requirements from UML
 03:57|NC - Paint on the bucket can now change colors based on the ColorSO assigned.
+12:01|NC - Refactors Bucket.cs
+13:32|NC - Implements Ingredients.cs

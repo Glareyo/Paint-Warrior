@@ -35,3 +35,7 @@ Last Updated:
 03:56|NC - Created additional temporary sprites for the bucket.
 03:57|NC - Paint on the bucket can now change colors based on the ColorSO assigned.
 03:57|NC - Updates Dev-Log
+12:01|NC - Refactors Bucket.cs
+12:45|NC - Creates a UI Bucket
+13:32|NC - Implements Ingredients.cs
+13:34|NC - Updates Dev-log
