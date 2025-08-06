@@ -1,5 +1,5 @@
 Last Updated: 
-20250805
+20250806
 
 20250805
 12:27|NC - Creation of Paint-Warrior Unity Project
@@ -8,3 +8,13 @@ Last Updated:
 15:03|NC - Adds Player Input Actions
 15:03|NC - Adds Player sprites for testing
 15:57|NC - Player can now move. Animations Changes depending on move value
+
+20250806
+01:56|NC - Adds AnimatorOverrideController to paint brush for modular code
+01:56|NC - Paint brush can now animate and change abilities
+02:45|NC - Implements player's ability to use the paint brush.
+02:45|NC - Paint brush can now set animation clips through the Animator Override Controller
+02:58|NC - Allows paint brush to rotate towards mouse position
+03:09|NC - Paint brush can now rotate, and the effect rotates with it.
+03:53|NC - Implements bucket.cs and requirements from UML
+03:57|NC - Paint on the bucket can now change colors based on the ColorSO assigned.

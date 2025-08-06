@@ -1,6 +1,10 @@
 Last Updated: 
-20250805
+20250806
 
 20250805
 14:49|NC - Creates temporary sprites for playerIdle and playerMove
 15:04|NC - Creates temporary playerIdle and playerWalk
+
+20250806
+02:46|NC - Creates a few more temporary assets for testing.
+03:56|NC - Created additional temporary sprites for the bucket.

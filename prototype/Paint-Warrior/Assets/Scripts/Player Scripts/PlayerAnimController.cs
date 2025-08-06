@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class PlayerAnimController : MonoBehaviour
 {
+    [SerializeField] Animator playerAnim;
+
 
     //Private Variables
-    Animator anim;
     private PlayerInputController playerInputController;
 
-
+    void Awake()
+    {
+        playerInputController = GetComponent<PlayerInputController>();
+    }
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        playerInputController = GetComponent<PlayerInputController>();
+        
     }
 
     void Update()
@@ -28,11 +31,11 @@ public class PlayerAnimController : MonoBehaviour
 
     void TriggerWalk()
     {
-        anim.SetTrigger("isWalking");
+        playerAnim.SetTrigger("isWalking");
     }
 
     void TriggerIdle()
     {   
-        anim.SetTrigger("isIdle");
+        playerAnim.SetTrigger("isIdle");
     }
 }

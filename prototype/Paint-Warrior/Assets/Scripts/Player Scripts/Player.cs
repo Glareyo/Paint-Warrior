@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] int health;
     [SerializeField] float moveSpeed;
 
-
+    [Header("GameObject Components")]
+    [SerializeField] PaintBrush paintBrush;
 
     //Private Variables
     private PlayerInputController playerInputController;
@@ -23,6 +24,10 @@ public class Player : MonoBehaviour
     {
         //bucket = GetComponentInChildren<Bucket>();
         playerInputController = GetComponent<PlayerInputController>();
+        if (paintBrush == null)
+        {
+            paintBrush = GetComponentInChildren<PaintBrush>();
+        }
     }
 
     void Update()
@@ -32,7 +37,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        MovePlayer();   
+        MovePlayer();
+        UseAbility();
     }
 
     /// <summary>
@@ -47,7 +53,11 @@ public class Player : MonoBehaviour
     /// </summary>
     void UseAbility()
     {
-
+        if (playerInputController.isLeftMouseClicked)
+        {
+            paintBrush.UseAbility();
+            playerInputController.OnLeftClickToggle(false);
+        }
     }
 
     /// <summary>

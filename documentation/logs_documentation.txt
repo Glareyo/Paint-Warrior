@@ -1,5 +1,5 @@
 Last Updated: 
-20250805
+20250806
 
 20250805
 10:15|NC - Copy and Creation of Development Template
@@ -10,3 +10,10 @@ Last Updated:
 14:34|NC - Creates a trello board for tasks
 15:59|NC - Videos recorded player moving.
 16:02|NC - Updates Dev Log
+23:38|NC - Adds image of PaintBrush.cs, Effect.cs, AbilitySO.cs, and PaintBrushAnimController.cs
+23:38|NC - Updates Dev-log
+
+20250806
+02:46|NC - Updates dev-log
+03:09|NC - Updates dev-log
+03:57|NC - Updates Dev-Log
