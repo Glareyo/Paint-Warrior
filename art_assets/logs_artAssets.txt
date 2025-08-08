@@ -1,5 +1,5 @@
 Last Updated: 
-20250806
+20250807
 
 20250805
 14:49|NC - Creates temporary sprites for playerIdle and playerMove
@@ -9,3 +9,8 @@ Last Updated:
 02:46|NC - Creates a few more temporary assets for testing.
 03:56|NC - Created additional temporary sprites for the bucket.
 12:45|NC - Creates a UI Bucket
+13:35|NC - Creates a few different dye sprites.
+
+20250807
+21:16|NC - Adds a temp animation for range.
+21:20|NC - Creates temp sprite for projectile

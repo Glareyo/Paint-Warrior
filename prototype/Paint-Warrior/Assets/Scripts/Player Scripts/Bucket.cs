@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class Bucket : MonoBehaviour
     [SerializeField] int BaseDamage; // Base damage  that bucket reverts to.
     [SerializeField] float BaseSpeed; // Base speed the bucket can use for certain actions (mix, use, etc...)
     [SerializeField] int BaseMaxQuantity; // Starting max quantity of paint the bucket can hold
-    [SerializeField] ColorSO startingPaintColor; // What color the player starts with at the moment.
+
 
     ColorSO paintColor; // What color paint the bucket has.
     int quantity; // Current Quantity of paint the bucket has
@@ -17,7 +18,12 @@ public class Bucket : MonoBehaviour
     float modifiedSpeed; // BaseSpeed + Modification Stats
     int modifiedMaxQuantity; // BaseMaxQuantity + Modification Stats.
 
+    public int MaxQuantity { get { return modifiedMaxQuantity; } }
+    public int Quantity { get { return quantity; } }
+
     Color NO_PAINT = new Color(0, 0, 0, 0);
+
+    public static Action OnChangePaint;
 
     // Implement Modification
 
@@ -25,8 +31,11 @@ public class Bucket : MonoBehaviour
 
     void Start()
     {
-        paintColor = startingPaintColor;
-        ToggleOnPaintSprite();
+        paintColor = null;
+        ChangePaintSprite(NO_PAINT);
+        modifiedDamage = BaseDamage;
+        modifiedSpeed = BaseSpeed;
+        modifiedMaxQuantity = BaseMaxQuantity;
     }
 
     void Update()
@@ -34,18 +43,63 @@ public class Bucket : MonoBehaviour
 
     }
 
-    public void MixPaint(ColorSO color, int mixQuantity)
+    /// <summary>
+    /// Checks to see if the bucket has enough paint
+    /// </summary>
+    /// <param name="qty"></param>
+    /// <returns></returns>
+    public bool HasEnoughPaint(int qty)
     {
-        paintColor = color;
-        quantity = mixQuantity;
+        if (qty <= quantity)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Checks to see if the bucket can mix paint into it.
+    /// </summary>
+    /// <param name="colorSO"></param>
+    /// <returns></returns>
+    public bool CanMixPaint(ColorSO colorSO)
+    {
+        if (paintColor == null)
+        { // No Paint Inside
+            return true;
+        }
+        if (paintColor == colorSO && quantity < modifiedMaxQuantity)
+        { // Paint is the same and it isn't full
+            return true;
+        }
+        return false;
+    }
+
+
+    /// <summary>
+    /// Create paint with a certain color and qty.
+    /// </summary>
+    /// <param name="colorSO"></param>
+    /// <param name="mixQuantity"></param>
+    public void MixPaint(ColorSO colorSO, int mixQuantity)
+    {
+        paintColor = colorSO;
+        quantity += mixQuantity;
         if (quantity > modifiedMaxQuantity)
         {
             quantity = modifiedMaxQuantity;
         }
-        if (paintSprite.color == NO_PAINT)
-        {
-            ToggleOnPaintSprite();
-        }
+        ChangePaintSprite(colorSO.Color);
+    }
+
+    /// <summary>
+    /// Change the color on the paint can.
+    /// </summary>
+    /// <param name="color"></param>
+    void ChangePaintSprite(Color color)
+    {
+        paintSprite.color = color;
+        OnChangePaint?.Invoke();
     }
 
     /// <summary>
@@ -55,7 +109,7 @@ public class Bucket : MonoBehaviour
     {
         quantity = 0;
         paintColor = null;
-        ToggleOffPaintSprite();
+        ChangePaintSprite(NO_PAINT);
     }
 
 
@@ -70,22 +124,13 @@ public class Bucket : MonoBehaviour
         if (quantity <= 0)
         {
             quantity = 0;
-            ToggleOffPaintSprite();
+            paintColor = null;
+            ChangePaintSprite(NO_PAINT);
         }
+
+        OnChangePaint?.Invoke();
     }
 
-
-    /// <summary>
-    /// Toggles off the alpha that handles the paint can.
-    /// </summary>
-    void ToggleOffPaintSprite()
-    {
-        paintSprite.color = NO_PAINT;
-    }
-    void ToggleOnPaintSprite()
-    {
-        paintSprite.color = new Color(paintColor.Color.r, paintColor.Color.g, paintColor.Color.b, 1);
-    }
 
     /// <summary>
     /// Replace the modification and update all stats.t

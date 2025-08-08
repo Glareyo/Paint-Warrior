@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: 
   colorName: Green
-  color: {r: 0, g: 1, b: 0.028105974, a: 0}
+  color: {r: 0, g: 1, b: 0.028105974, a: 1}

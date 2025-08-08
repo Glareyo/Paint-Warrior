@@ -6,15 +6,15 @@ public class MeleeEffect : Effect
     void Start()
     {
         Destroy(this.gameObject, clip.length);
+    }   
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Struck something! Damage: " + damage);
     }
 
-    void Update()
+    public override void Init(Vector2 _startPosition, Quaternion _startRotation, ColorSO _colorSO, int _damage, float _range)
     {
-
-    }
-
-    public override void Init(Vector2 _startPosition, Quaternion _startRotation)
-    {
-        base.Init(_startPosition, _startRotation);
+        base.Init(_startPosition, _startRotation, _colorSO, _damage, _range);
     }
 }

@@ -27,6 +27,7 @@ public class PaintBrushAnimController : MonoBehaviour
 
     public void SetUpAnimator(AnimationClip idle, AnimationClip use)
     {
+        paintBrushAnimOverride = new AnimatorOverrideController(paintBrushAnim.runtimeAnimatorController);
         paintBrushAnimOverride[idleClip.name] = idle;
         paintBrushAnimOverride[useClip.name] = use;
         paintBrushAnim.runtimeAnimatorController = paintBrushAnimOverride;

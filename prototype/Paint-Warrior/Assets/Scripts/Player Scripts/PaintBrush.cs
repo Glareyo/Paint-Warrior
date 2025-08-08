@@ -10,14 +10,27 @@ public class PaintBrush : MonoBehaviour
     [SerializeField] float offset;
     [Tooltip("Where the effect will be created at.")]
     [SerializeField] Transform effectPoint;
+    [Tooltip("What color the paint brush starts with.")]
+    [SerializeField] ColorSO startingColorSO;
 
     public Dictionary<int, AbilitySO> abilities; //What abilities the player has. int > abilitySO.slotNumber, abilitySO > abilitySO
     AbilitySO currentAbility; //Current Ability Selected
 
     // Stats retrieved from Player.cs
-    int damage;
-    float speed;
-    float range;
+    int baseDamage;
+    float baseSpeed;
+    float baseRange;
+
+    // Modified stats
+    int modDamage;
+    float modSpeed;
+    float modRange;
+
+    public int ReqQty { get { return currentAbility.Cost; } }
+    public int abilitySlots { get { return abilities.Count; } }
+
+    //ColorSO used to set color of effects
+    ColorSO colorSO;
 
     PaintBrushAnimController animController;
 
@@ -36,6 +49,7 @@ public class PaintBrush : MonoBehaviour
     }
     void Start()
     {
+        colorSO = startingColorSO;
         //Set up paint brush animation controller
         SetAnimations();
     }
@@ -55,9 +69,9 @@ public class PaintBrush : MonoBehaviour
     /// <param name="_range"></param>
     public void SetStats(int _dmg, float _spd, float _range)
     {
-        damage = _dmg;
-        speed = _spd;
-        range = _range;
+        baseDamage = _dmg;
+        baseSpeed = _spd;
+        baseRange = _range;
     }
 
     /// <summary>
@@ -73,6 +87,9 @@ public class PaintBrush : MonoBehaviour
         if (abilities.ContainsKey(number))
         {
             currentAbility = abilities[number];
+            modDamage = currentAbility.DamageModifier + baseDamage;
+            modRange = currentAbility.RangeModifier + baseRange;
+            SetAnimations();
         }
     }
 
@@ -115,7 +132,7 @@ public class PaintBrush : MonoBehaviour
     void CreateEffect()
     {
         Effect effect = Instantiate(currentAbility.EffectPrefab, this.transform.position, Quaternion.identity).GetComponent<Effect>();
-        effect.Init(effectPoint.position, effectPoint.rotation);
+        effect.Init(effectPoint.position, effectPoint.rotation, colorSO, modDamage, modRange);
     }
 
     void RotatePaintBrush()
@@ -130,6 +147,11 @@ public class PaintBrush : MonoBehaviour
         float angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         //Rotate the weapon in the target direction. Offset in order to make it look correct.
         this.transform.rotation = Quaternion.Euler(0f, 0f, angle - offset);
+    }
+
+    public void SetColor(ColorSO _colorSO)
+    {
+        this.colorSO = _colorSO;
     }
 
     /// <summary>

@@ -1,5 +1,5 @@
 Last Updated: 
-20250806
+20250807
 
 20250805
 10:15|NC - Copy and Creation of Development Template
@@ -39,3 +39,13 @@ Last Updated:
 12:45|NC - Creates a UI Bucket
 13:32|NC - Implements Ingredients.cs
 13:34|NC - Updates Dev-log
+13:35|NC - Creates a few different dye sprites.
+15:32|NC - Implements inventory system
+
+20250807
+21:16|NC - Adds a temp animation for range.
+21:16|NC - Updates Dev-log
+21:16|NC - Adds player functionality to use paint from paint bucket.
+21:20|NC - Creates temp sprite for projectile
+22:25|NC - Adds Projectile. Player can now swap between melee and projectiles.
+22:26|NC - updates Dev-log

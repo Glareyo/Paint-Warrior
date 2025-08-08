@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c2099f09467b94a96fa60038c7edfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: Red Dye
+  ingredientName: Dye
   Colors:
   - {fileID: 11400000, guid: 8ca2e59a434147c4cb5ead384e219b2f, type: 2}
   - {fileID: 11400000, guid: 1b261a7e84d61f14eb57fec4ba559f1b, type: 2}

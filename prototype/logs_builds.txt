@@ -1,5 +1,5 @@
 Last Updated: 
-20250806
+20250807
 
 20250805
 12:27|NC - Creation of Paint-Warrior Unity Project
@@ -20,3 +20,8 @@ Last Updated:
 03:57|NC - Paint on the bucket can now change colors based on the ColorSO assigned.
 12:01|NC - Refactors Bucket.cs
 13:32|NC - Implements Ingredients.cs
+15:32|NC - Implements inventory system
+
+20250807
+21:16|NC - Adds player functionality to use paint from paint bucket.
+22:25|NC - Adds Projectile. Player can now swap between melee and projectiles.

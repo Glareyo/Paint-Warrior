@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd4603ec67d90f4cb5f83fd4bd446b7, type: 3}
+  m_Name: ProjectileAbility
+  m_EditorClassIdentifier: 
+  abilityName: Projectile
+  slotNum: 2
+  idleAnim: {fileID: 7400000, guid: b838e90265b93e04dac8a96d72b84ad2, type: 2}
+  useAnim: {fileID: 7400000, guid: 5d04cec17898e574680cc57703ba85ca, type: 2}
+  effectPrefab: {fileID: 4335119852255389400, guid: 746c40cf77ee79c4584fe2fb035264b9, type: 3}
+  damageModifier: 2
+  rangeModifier: 10
+  cost: 1
+  createEffectImmediately: 0
